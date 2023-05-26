@@ -16,9 +16,7 @@ class App extends React.Component {
   hendleLeaveFeedback = evt => {
     const { name } = evt.target;
     this.setState(state => ({ [name]: state[name] + 1 }));
-    console.log('Click on Feedback Btn ');
-    console.log(this);
-    console.log(evt.target.name);
+    
   };
 
   countTotalFeedback = () => {
