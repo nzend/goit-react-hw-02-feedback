@@ -1,4 +1,5 @@
 // import css from './Statistics.module.css';
+import PropTypes from 'prop-types';
 
 export const Statistics = ({
   good,
@@ -17,3 +18,13 @@ export const Statistics = ({
     <span>Positive feedback: {positiveFeedbackPercentage()}%</span>
   </>
 );
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+
+  total: PropTypes.func.isRequired,
+
+  positiveFeedbackPercentage: PropTypes.func.isRequired,
+};
