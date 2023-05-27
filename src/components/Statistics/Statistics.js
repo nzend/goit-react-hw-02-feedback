@@ -1,4 +1,4 @@
-import css from './Statistics.module.css';
+// import css from './Statistics.module.css';
 
 export const Statistics = ({
   good,
