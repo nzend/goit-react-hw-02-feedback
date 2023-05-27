@@ -1,13 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
-export const FeedbackOptions = ({
-  options,
-  onLeaveFeedback,
-  total,
-  positiveFeedbackPercentage,
-}) => (
+export const FeedbackOptions = ({ options, onLeaveFeedback }) => (
   <div>
     <ul>
       {Object.keys(options).map(option => (
