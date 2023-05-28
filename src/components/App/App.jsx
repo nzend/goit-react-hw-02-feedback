@@ -1,10 +1,10 @@
 import React from 'react';
+import css from './App.module.css';
 
-import { FeedbackOptions } from './FeedbackOptions/FeedbackOptions';
-import { Statistics } from './Statistics/Statistics';
-import { Section } from './Section/Section';
-import { Notification } from './Notification/Notification';
-
+import { FeedbackOptions } from '../FeedbackOptions/FeedbackOptions';
+import { Statistics } from '../Statistics/Statistics';
+import { Section } from '../Section/Section';
+import { Notification } from '../Notification/Notification';
 
 class App extends React.Component {
   state = {
@@ -16,7 +16,6 @@ class App extends React.Component {
   hendleLeaveFeedback = evt => {
     const { name } = evt.target;
     this.setState(state => ({ [name]: state[name] + 1 }));
-    
   };
 
   countTotalFeedback = () => {
@@ -31,7 +30,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <>
+      <div className={css.container}>
         <Section title="Please leave feedback">
           <FeedbackOptions
             options={this.state}
@@ -52,7 +51,7 @@ class App extends React.Component {
             ></Statistics>
           )}
         </Section>
-      </>
+      </div>
     );
   }
 }
